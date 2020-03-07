@@ -17,7 +17,7 @@ public class GlobalExceptionHandler {
 
 
   @ExceptionHandler
-  public ResponseEntity<AbstractMap.SimpleEntry<String, String>> handle(Exception exception) {
+  public ResponseEntity<?> handle(Exception exception) {
     return null;
   }
 }

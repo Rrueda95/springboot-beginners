@@ -1,4 +1,4 @@
-package com.research24x7.springboot.model;
+package com.research24x7.springboot.entity;
 
 import lombok.*;
 

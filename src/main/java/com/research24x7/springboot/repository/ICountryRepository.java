@@ -2,7 +2,7 @@
 package com.research24x7.springboot.repository;
 
 
-import com.research24x7.springboot.model.CountryEntity;
+import com.research24x7.springboot.entity.CountryEntity;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 

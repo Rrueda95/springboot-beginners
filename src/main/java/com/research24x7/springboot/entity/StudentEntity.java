@@ -1,12 +1,11 @@
 
-package com.research24x7.springboot.model;
+package com.research24x7.springboot.entity;
 
 import java.io.Serializable;
 import javax.persistence.*;
 
 import lombok.*;
-import org.apache.commons.lang3.builder.EqualsExclude;
-import org.apache.commons.lang3.builder.HashCodeExclude;
+
 
 @Getter
 @Setter

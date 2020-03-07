@@ -664,3 +664,34 @@ Caused by: com.mysql.cj.exceptions.InvalidConnectionAttributeException: The serv
 2020-02-29 13:48:56.184  INFO 6300 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
 2020-02-29 13:48:56.321  INFO 6300 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/api/school'
 2020-02-29 13:48:56.321  INFO 6300 --- [main] com.research24x7.springboot.Application  : Started Application in 2.693 seconds (JVM running for 3.282)
+2020-03-07 11:48:37.085  INFO 5324 --- [main] com.research24x7.springboot.Application  : Starting Application on Instructor-403 with PID 5324 (started by EducaciónIT in C:\Users\EducaciónIT\Downloads\springboot-beginners)
+2020-03-07 11:48:37.085  INFO 5324 --- [main] com.research24x7.springboot.Application  : No active profile set, falling back to default profiles: default
+2020-03-07 11:48:38.024  INFO 5324 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-07 11:48:38.076  INFO 5324 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44ms. Found 2 JPA repository interfaces.
+2020-03-07 11:48:38.420  INFO 5324 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-07 11:48:38.426  INFO 5324 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-07 11:48:38.427  INFO 5324 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-07 11:48:38.513  INFO 5324 --- [main] o.a.c.c.C.[.[localhost].[/api/school]    : Initializing Spring embedded WebApplicationContext
+2020-03-07 11:48:38.513  INFO 5324 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1397 ms
+2020-03-07 11:48:38.613  INFO 5324 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-03-07 11:48:38.674  INFO 5324 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-03-07 11:48:38.806  INFO 5324 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-03-07 11:48:38.961  INFO 5324 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-07 11:48:38.962  WARN 5324 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-03-07 11:48:39.052  INFO 5324 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-07 11:48:39.060  INFO 5324 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-03-07 11:48:39.521 DEBUG 5324 --- [main] org.hibernate.SQL                        : drop table if exists country
+2020-03-07 11:48:39.582 DEBUG 5324 --- [main] org.hibernate.SQL                        : drop table if exists student
+2020-03-07 11:48:39.591 DEBUG 5324 --- [main] org.hibernate.SQL                        : create table country (cou_id bigint not null auto_increment, cou_name varchar(64) not null, primary key (cou_id)) engine=MyISAM
+2020-03-07 11:48:39.623 DEBUG 5324 --- [main] org.hibernate.SQL                        : create table student (stu_dni varchar(255) not null, stu_last_name varchar(64) not null, stu_name varchar(64) not null, stu_postal varchar(10) not null, stu_street varchar(64) not null, stu_street_number bigint not null, cou_id bigint, primary key (stu_dni)) engine=MyISAM
+2020-03-07 11:48:39.635 DEBUG 5324 --- [main] org.hibernate.SQL                        : alter table student add constraint FK4aguyb8nvd7aqh3bb92tmuvue foreign key (cou_id) references country (cou_id)
+2020-03-07 11:48:39.660  INFO 5324 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-03-07 11:48:39.668  INFO 5324 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-07 11:48:39.948  WARN 5324 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-07 11:48:40.059  INFO 5324 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-07 11:48:40.231  INFO 5324 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/api/school'
+2020-03-07 11:48:40.232  INFO 5324 --- [main] com.research24x7.springboot.Application  : Started Application in 3.461 seconds (JVM running for 4.192)
+2020-03-07 11:53:44.475  INFO 5324 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[localhost].[/api/school]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-07 11:53:44.475  INFO 5324 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-07 11:53:44.481  INFO 5324 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-03-07 11:53:44.617 DEBUG 5324 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select studentent0_.stu_dni as stu_dni1_1_, studentent0_.stu_last_name as stu_last2_1_, studentent0_.stu_name as stu_name3_1_, studentent0_.cou_id as cou_id7_1_, studentent0_.stu_postal as stu_post4_1_, studentent0_.stu_street as stu_stre5_1_, studentent0_.stu_street_number as stu_stre6_1_ from student studentent0_
