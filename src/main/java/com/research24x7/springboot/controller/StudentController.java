@@ -1,5 +1,6 @@
 package com.research24x7.springboot.controller;
 
+import com.research24x7.springboot.dto.StudentResponseDTO;
 import com.research24x7.springboot.repository.IStudentRepository;
 import com.research24x7.springboot.service.IStudentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,9 @@ public class StudentController {
     @RequestMapping(method = RequestMethod.GET)
     public ResponseEntity<?> get () {
 
-        return ResponseEntity.ok (this.service.findAll());
+        StudentResponseDTO studentResponseDTO = new StudentResponseDTO();
+        studentResponseDTO.setBody(this.service.findAll());
+
+        return ResponseEntity.ok (studentResponseDTO);
     }
 }

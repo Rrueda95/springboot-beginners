@@ -6,9 +6,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
 @AllArgsConstructor
-
-public class StudentResponseDTO extends AbstractResponseDTO<StudentDTO> {
+public class StudentResponseDTO extends AbstractResponseDTO<List<StudentDTO>> {
 }

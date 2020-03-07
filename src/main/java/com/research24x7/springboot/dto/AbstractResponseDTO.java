@@ -15,7 +15,7 @@ import java.time.LocalTime;
 @NoArgsConstructor
 public abstract class AbstractResponseDTO<T> {
 
-    private LocalTime timestamp;
+    private LocalTime timestamp = LocalTime.now();
 
     private T body;
 }
